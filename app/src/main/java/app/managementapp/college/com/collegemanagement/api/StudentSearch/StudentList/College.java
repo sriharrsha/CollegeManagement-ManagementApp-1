@@ -1,12 +1,11 @@
 
-package app.managementapp.college.com.collegemanagement.api.StudentPersonalDetails;
-
-import java.util.ArrayList;
-import java.util.List;
+package app.managementapp.college.com.collegemanagement.api.StudentSearch.StudentList;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class College {
 
@@ -21,10 +20,10 @@ public class College {
     private Object collegeCode;
     @SerializedName("CollegeID")
     @Expose
-    private Integer collegeID;
+    private Object collegeID;
     @SerializedName("CollegeName")
     @Expose
-    private String collegeName;
+    private Object collegeName;
     @SerializedName("CollegeShortName")
     @Expose
     private Object collegeShortName;
@@ -109,7 +108,7 @@ public class College {
      * @return
      *     The collegeID
      */
-    public Integer getCollegeID() {
+    public Object getCollegeID() {
         return collegeID;
     }
 
@@ -118,7 +117,7 @@ public class College {
      * @param collegeID
      *     The CollegeID
      */
-    public void setCollegeID(Integer collegeID) {
+    public void setCollegeID(Object collegeID) {
         this.collegeID = collegeID;
     }
 
@@ -127,7 +126,7 @@ public class College {
      * @return
      *     The collegeName
      */
-    public String getCollegeName() {
+    public Object getCollegeName() {
         return collegeName;
     }
 
@@ -136,7 +135,7 @@ public class College {
      * @param collegeName
      *     The CollegeName
      */
-    public void setCollegeName(String collegeName) {
+    public void setCollegeName(Object collegeName) {
         this.collegeName = collegeName;
     }
 

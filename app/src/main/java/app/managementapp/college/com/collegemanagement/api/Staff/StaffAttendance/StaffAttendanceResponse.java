@@ -1,29 +1,15 @@
 
 package app.managementapp.college.com.collegemanagement.api.Staff.StaffAttendance;
 
-import android.os.Parcel;
-import android.os.Parcelable;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.ArrayList;
-import java.util.List;
 
+public class StaffAttendanceResponse {
 
-public class StaffAttendanceResponse implements Parcelable {
-
-    public static final Creator<StaffAttendanceResponse> CREATOR = new Creator<StaffAttendanceResponse>() {
-        @Override
-        public StaffAttendanceResponse createFromParcel(Parcel in) {
-            return new StaffAttendanceResponse(in);
-        }
-
-        @Override
-        public StaffAttendanceResponse[] newArray(int size) {
-            return new StaffAttendanceResponse[size];
-        }
-    };
     @SerializedName("DataList")
     @Expose
     private List<DataList> dataList = new ArrayList<DataList>();
@@ -36,10 +22,6 @@ public class StaffAttendanceResponse implements Parcelable {
     @SerializedName("ServiceResult")
     @Expose
     private Integer serviceResult;
-
-    protected StaffAttendanceResponse(Parcel in) {
-        extendedToken = in.readString();
-    }
 
     /**
      * 
@@ -113,13 +95,4 @@ public class StaffAttendanceResponse implements Parcelable {
         this.serviceResult = serviceResult;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(extendedToken);
-    }
 }

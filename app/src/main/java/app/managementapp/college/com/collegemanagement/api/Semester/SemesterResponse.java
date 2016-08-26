@@ -1,29 +1,15 @@
 
 package app.managementapp.college.com.collegemanagement.api.Semester;
 
-import android.os.Parcel;
-import android.os.Parcelable;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.ArrayList;
-import java.util.List;
 
+public class SemesterResponse {
 
-public class SemesterResponse implements Parcelable {
-
-    public static final Creator<SemesterResponse> CREATOR = new Creator<SemesterResponse>() {
-        @Override
-        public SemesterResponse createFromParcel(Parcel in) {
-            return new SemesterResponse(in);
-        }
-
-        @Override
-        public SemesterResponse[] newArray(int size) {
-            return new SemesterResponse[size];
-        }
-    };
     @SerializedName("DataList")
     @Expose
     private List<DataList> dataList = new ArrayList<DataList>();
@@ -36,10 +22,6 @@ public class SemesterResponse implements Parcelable {
     @SerializedName("ServiceResult")
     @Expose
     private Integer serviceResult;
-
-    protected SemesterResponse(Parcel in) {
-        extendedToken = in.readString();
-    }
 
     /**
      * 
@@ -113,13 +95,4 @@ public class SemesterResponse implements Parcelable {
         this.serviceResult = serviceResult;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(extendedToken);
-    }
 }

@@ -1,29 +1,15 @@
 
 package app.managementapp.college.com.collegemanagement.api.CollegeProfile;
 
-import android.os.Parcel;
-import android.os.Parcelable;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.ArrayList;
-import java.util.List;
 
+public class DataList {
 
-public class DataList implements Parcelable {
-
-    public static final Creator<DataList> CREATOR = new Creator<DataList>() {
-        @Override
-        public DataList createFromParcel(Parcel in) {
-            return new DataList(in);
-        }
-
-        @Override
-        public DataList[] newArray(int size) {
-            return new DataList[size];
-        }
-    };
     @SerializedName("Address")
     @Expose
     private Address address;
@@ -54,17 +40,6 @@ public class DataList implements Parcelable {
     @SerializedName("WebSite")
     @Expose
     private String webSite;
-
-    protected DataList(Parcel in) {
-        address = in.readParcelable(Address.class.getClassLoader());
-        base64Image = in.readString();
-        universityName = in.readString();
-        universityShortName = in.readString();
-        collegeName = in.readString();
-        email = in.readString();
-        fax = in.readString();
-        webSite = in.readString();
-    }
 
     /**
      * 
@@ -246,20 +221,4 @@ public class DataList implements Parcelable {
         this.webSite = webSite;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeParcelable(address, flags);
-        dest.writeString(base64Image);
-        dest.writeString(universityName);
-        dest.writeString(universityShortName);
-        dest.writeString(collegeName);
-        dest.writeString(email);
-        dest.writeString(fax);
-        dest.writeString(webSite);
-    }
 }

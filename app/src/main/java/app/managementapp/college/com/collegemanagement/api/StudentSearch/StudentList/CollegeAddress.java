@@ -1,17 +1,14 @@
 
-package app.managementapp.college.com.collegemanagement.api.FacultyProfile;
-
-import android.os.Parcel;
-import android.os.Parcelable;
+package app.managementapp.college.com.collegemanagement.api.StudentSearch.StudentList;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Address implements Parcelable {
+public class CollegeAddress {
 
     @SerializedName("Address")
     @Expose
-    private String address;
+    private Object address;
     @SerializedName("AddressType")
     @Expose
     private Object addressType;
@@ -20,7 +17,7 @@ public class Address implements Parcelable {
     private Object city;
     @SerializedName("Country")
     @Expose
-    private String country;
+    private Object country;
     @SerializedName("Mobile")
     @Expose
     private Object mobile;
@@ -29,44 +26,14 @@ public class Address implements Parcelable {
     private Object phone;
     @SerializedName("State")
     @Expose
-    private String state;
-
-    protected Address(Parcel in) {
-        address = in.readString();
-        country = in.readString();
-        state = in.readString();
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(address);
-        dest.writeString(country);
-        dest.writeString(state);
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    public static final Creator<Address> CREATOR = new Creator<Address>() {
-        @Override
-        public Address createFromParcel(Parcel in) {
-            return new Address(in);
-        }
-
-        @Override
-        public Address[] newArray(int size) {
-            return new Address[size];
-        }
-    };
+    private Object state;
 
     /**
      * 
      * @return
      *     The address
      */
-    public String getAddress() {
+    public Object getAddress() {
         return address;
     }
 
@@ -75,7 +42,7 @@ public class Address implements Parcelable {
      * @param address
      *     The Address
      */
-    public void setAddress(String address) {
+    public void setAddress(Object address) {
         this.address = address;
     }
 
@@ -120,7 +87,7 @@ public class Address implements Parcelable {
      * @return
      *     The country
      */
-    public String getCountry() {
+    public Object getCountry() {
         return country;
     }
 
@@ -129,7 +96,7 @@ public class Address implements Parcelable {
      * @param country
      *     The Country
      */
-    public void setCountry(String country) {
+    public void setCountry(Object country) {
         this.country = country;
     }
 
@@ -174,7 +141,7 @@ public class Address implements Parcelable {
      * @return
      *     The state
      */
-    public String getState() {
+    public Object getState() {
         return state;
     }
 
@@ -183,7 +150,7 @@ public class Address implements Parcelable {
      * @param state
      *     The State
      */
-    public void setState(String state) {
+    public void setState(Object state) {
         this.state = state;
     }
 

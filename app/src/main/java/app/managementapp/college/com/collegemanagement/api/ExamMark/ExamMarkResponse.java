@@ -1,29 +1,15 @@
 
 package app.managementapp.college.com.collegemanagement.api.ExamMark;
 
-import android.os.Parcel;
-import android.os.Parcelable;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.ArrayList;
-import java.util.List;
 
+public class ExamMarkResponse {
 
-public class ExamMarkResponse implements Parcelable {
-
-    public static final Creator<ExamMarkResponse> CREATOR = new Creator<ExamMarkResponse>() {
-        @Override
-        public ExamMarkResponse createFromParcel(Parcel in) {
-            return new ExamMarkResponse(in);
-        }
-
-        @Override
-        public ExamMarkResponse[] newArray(int size) {
-            return new ExamMarkResponse[size];
-        }
-    };
     @SerializedName("DataList")
     @Expose
     private List<DataList> dataList = new ArrayList<DataList>();
@@ -36,22 +22,6 @@ public class ExamMarkResponse implements Parcelable {
     @SerializedName("ServiceResult")
     @Expose
     private Integer serviceResult;
-
-    protected ExamMarkResponse(Parcel in) {
-        dataList = in.createTypedArrayList(DataList.CREATOR);
-        extendedToken = in.readString();
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeTypedList(dataList);
-        dest.writeString(extendedToken);
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
 
     /**
      * 

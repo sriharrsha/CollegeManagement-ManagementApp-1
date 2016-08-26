@@ -25,6 +25,7 @@ import app.managementapp.college.com.collegemanagement.FeedbackList;
 import app.managementapp.college.com.collegemanagement.InternalExams;
 import app.managementapp.college.com.collegemanagement.InvigilationDetails;
 import app.managementapp.college.com.collegemanagement.R;
+import app.managementapp.college.com.collegemanagement.management.StudentSearch.StudentSearch;
 import app.managementapp.college.com.collegemanagement.model.MenuItem;
 import app.managementapp.college.com.collegemanagement.model.StudentItem;
 import app.managementapp.college.com.collegemanagement.widget.CircleTransform;
@@ -151,7 +152,7 @@ public class MenuGridAdapter extends RecyclerView.Adapter<MenuGridAdapter.ViewHo
             Log.d(DEBUG_TAG, "onClick: StudentOnClickListener ");
             Intent i = null;
             if(position == 0) {
-                i = new Intent(ctx, FeedbackList.class);
+                i = new Intent(ctx, StudentSearch.class);
             }
             if(position == 1){
                 i = new Intent(ctx, InvigilationDetails.class);

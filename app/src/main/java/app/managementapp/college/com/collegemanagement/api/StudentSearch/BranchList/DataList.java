@@ -1,37 +1,24 @@
 
 package app.managementapp.college.com.collegemanagement.api.StudentSearch.BranchList;
 
-import android.os.Parcel;
-import android.os.Parcelable;
 
-import java.util.HashMap;
-import java.util.Map;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
-public class DataList implements Parcelable {
+public class DataList {
 
-    public static final Creator<DataList> CREATOR = new Creator<DataList>() {
-        @Override
-        public DataList createFromParcel(Parcel in) {
-            return new DataList(in);
-        }
-
-        @Override
-        public DataList[] newArray(int size) {
-            return new DataList[size];
-        }
-    };
+    @SerializedName("DrpID")
+    @Expose
     private String drpID;
+    @SerializedName("DrpName")
+    @Expose
     private String drpName;
+    @SerializedName("FilterID")
+    @Expose
     private String filterID;
+    @SerializedName("NomenClature")
+    @Expose
     private String nomenClature;
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
-
-    protected DataList(Parcel in) {
-        drpID = in.readString();
-        drpName = in.readString();
-        filterID = in.readString();
-        nomenClature = in.readString();
-    }
 
     /**
      * 
@@ -105,24 +92,4 @@ public class DataList implements Parcelable {
         this.nomenClature = nomenClature;
     }
 
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(drpID);
-        dest.writeString(drpName);
-        dest.writeString(filterID);
-        dest.writeString(nomenClature);
-    }
 }

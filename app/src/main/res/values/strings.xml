@@ -71,6 +71,10 @@
     <string name="title_activity_apply_leave">ApplyLeave</string>
     <string name="title_activity_apply_leave_alternative_selection">ApplyLeaveAlternativeSelection
     </string>
+    <string name="title_activity_student_search">title_activity_student_search
+    </string>
+    <string name="title_activity_student_search_list">title_activity_student_search_list
+    </string>
     <string name="title_activity_management_home">ManagementHome</string>
 
 </resources>

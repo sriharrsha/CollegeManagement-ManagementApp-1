@@ -89,6 +89,17 @@
             android:name=".management.ManagementHome"
             android:label="@string/title_activity_management_home"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+
+
+        <activity
+            android:name=".management.StudentSearch.StudentSearch"
+            android:label="@string/title_activity_student_search"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".management.StudentSearch.StudentSearchList"
+            android:label="@string/title_activity_student_search_list"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
     </application>
 
 </manifest>

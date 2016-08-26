@@ -2,26 +2,12 @@
 package app.managementapp.college.com.collegemanagement.api.TimeTableSchedule;
 
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 
-public class DataList implements Parcelable {
+public class DataList {
 
-    public static final Creator<DataList> CREATOR = new Creator<DataList>() {
-        @Override
-        public DataList createFromParcel(Parcel in) {
-            return new DataList(in);
-        }
-
-        @Override
-        public DataList[] newArray(int size) {
-            return new DataList[size];
-        }
-    };
     @SerializedName("AdTeacherID")
     @Expose
     private Integer adTeacherID;
@@ -55,18 +41,6 @@ public class DataList implements Parcelable {
     @SerializedName("Title")
     @Expose
     private String title;
-
-    protected DataList(Parcel in) {
-        classDate = in.readString();
-        course = in.readString();
-        endDate = in.readString();
-        endTime = in.readString();
-        place = in.readString();
-        section = in.readString();
-        startDate = in.readString();
-        startTime = in.readString();
-        title = in.readString();
-    }
 
     /**
      * 
@@ -266,21 +240,4 @@ public class DataList implements Parcelable {
         this.title = title;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(classDate);
-        dest.writeString(course);
-        dest.writeString(endDate);
-        dest.writeString(endTime);
-        dest.writeString(place);
-        dest.writeString(section);
-        dest.writeString(startDate);
-        dest.writeString(startTime);
-        dest.writeString(title);
-    }
 }

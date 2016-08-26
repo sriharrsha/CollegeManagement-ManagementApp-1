@@ -1,9 +1,6 @@
 
 package app.managementapp.college.com.collegemanagement.api.AcademicCalender;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -11,22 +8,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class AcademicCalenderResponse implements Parcelable {
+public class AcademicCalenderResponse {
 
-    public static final Creator<AcademicCalenderResponse> CREATOR = new Creator<AcademicCalenderResponse>() {
-        @Override
-        public AcademicCalenderResponse createFromParcel(Parcel in) {
-            return new AcademicCalenderResponse(in);
-        }
-
-        @Override
-        public AcademicCalenderResponse[] newArray(int size) {
-            return new AcademicCalenderResponse[size];
-        }
-    };
     @SerializedName("DataList")
     @Expose
-    private List<app.managementapp.college.com.collegemanagement.api.AcademicCalender.DataList> dataList = new ArrayList<app.managementapp.college.com.collegemanagement.api.AcademicCalender.DataList>();
+    private List<DataList> dataList = new ArrayList<DataList>();
     @SerializedName("ErrorMessage")
     @Expose
     private Object errorMessage;
@@ -37,16 +23,12 @@ public class AcademicCalenderResponse implements Parcelable {
     @Expose
     private Integer serviceResult;
 
-    protected AcademicCalenderResponse(Parcel in) {
-        extendedToken = in.readString();
-    }
-
     /**
      * 
      * @return
      *     The dataList
      */
-    public List<app.managementapp.college.com.collegemanagement.api.AcademicCalender.DataList> getDataList() {
+    public List<DataList> getDataList() {
         return dataList;
     }
 
@@ -113,13 +95,4 @@ public class AcademicCalenderResponse implements Parcelable {
         this.serviceResult = serviceResult;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(extendedToken);
-    }
 }

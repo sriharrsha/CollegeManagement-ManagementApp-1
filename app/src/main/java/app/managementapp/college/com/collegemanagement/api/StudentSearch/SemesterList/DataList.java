@@ -1,16 +1,23 @@
 
 package app.managementapp.college.com.collegemanagement.api.StudentSearch.SemesterList;
 
-import java.util.HashMap;
-import java.util.Map;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class DataList {
 
+    @SerializedName("DrpID")
+    @Expose
     private String drpID;
+    @SerializedName("DrpName")
+    @Expose
     private String drpName;
+    @SerializedName("FilterID")
+    @Expose
     private String filterID;
+    @SerializedName("NomenClature")
+    @Expose
     private String nomenClature;
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
      * 
@@ -82,14 +89,6 @@ public class DataList {
      */
     public void setNomenClature(String nomenClature) {
         this.nomenClature = nomenClature;
-    }
-
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
     }
 
 }

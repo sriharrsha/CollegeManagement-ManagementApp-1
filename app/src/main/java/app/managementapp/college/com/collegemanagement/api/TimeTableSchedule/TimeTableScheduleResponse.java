@@ -1,29 +1,15 @@
 
 package app.managementapp.college.com.collegemanagement.api.TimeTableSchedule;
 
-import android.os.Parcel;
-import android.os.Parcelable;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.ArrayList;
-import java.util.List;
 
+public class TimeTableScheduleResponse {
 
-public class TimeTableScheduleResponse implements Parcelable {
-
-    public static final Creator<TimeTableScheduleResponse> CREATOR = new Creator<TimeTableScheduleResponse>() {
-        @Override
-        public TimeTableScheduleResponse createFromParcel(Parcel in) {
-            return new TimeTableScheduleResponse(in);
-        }
-
-        @Override
-        public TimeTableScheduleResponse[] newArray(int size) {
-            return new TimeTableScheduleResponse[size];
-        }
-    };
     @SerializedName("DataList")
     @Expose
     private List<DataList> dataList = new ArrayList<DataList>();
@@ -36,10 +22,6 @@ public class TimeTableScheduleResponse implements Parcelable {
     @SerializedName("ServiceResult")
     @Expose
     private Integer serviceResult;
-
-    protected TimeTableScheduleResponse(Parcel in) {
-        extendedToken = in.readString();
-    }
 
     /**
      * 
@@ -113,13 +95,4 @@ public class TimeTableScheduleResponse implements Parcelable {
         this.serviceResult = serviceResult;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(extendedToken);
-    }
 }

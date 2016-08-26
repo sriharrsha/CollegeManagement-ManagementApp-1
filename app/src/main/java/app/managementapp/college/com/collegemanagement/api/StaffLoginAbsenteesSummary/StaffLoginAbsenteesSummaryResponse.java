@@ -1,29 +1,15 @@
 
 package app.managementapp.college.com.collegemanagement.api.StaffLoginAbsenteesSummary;
 
-import android.os.Parcel;
-import android.os.Parcelable;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.ArrayList;
-import java.util.List;
 
+public class StaffLoginAbsenteesSummaryResponse {
 
-public class StaffLoginAbsenteesSummaryResponse implements Parcelable {
-
-    public static final Creator<StaffLoginAbsenteesSummaryResponse> CREATOR = new Creator<StaffLoginAbsenteesSummaryResponse>() {
-        @Override
-        public StaffLoginAbsenteesSummaryResponse createFromParcel(Parcel in) {
-            return new StaffLoginAbsenteesSummaryResponse(in);
-        }
-
-        @Override
-        public StaffLoginAbsenteesSummaryResponse[] newArray(int size) {
-            return new StaffLoginAbsenteesSummaryResponse[size];
-        }
-    };
     @SerializedName("DataList")
     @Expose
     private List<DataList> dataList = new ArrayList<DataList>();
@@ -36,10 +22,6 @@ public class StaffLoginAbsenteesSummaryResponse implements Parcelable {
     @SerializedName("ServiceResult")
     @Expose
     private Integer serviceResult;
-
-    protected StaffLoginAbsenteesSummaryResponse(Parcel in) {
-        extendedToken = in.readString();
-    }
 
     /**
      * 
@@ -113,13 +95,4 @@ public class StaffLoginAbsenteesSummaryResponse implements Parcelable {
         this.serviceResult = serviceResult;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(extendedToken);
-    }
 }

@@ -1,41 +1,39 @@
 
-package app.managementapp.college.com.collegemanagement.api.UniversityProfile;
-
+package app.managementapp.college.com.collegemanagement.api.StudentSearch.StudentList;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-
-public class Address {
+public class PermanentAddress {
 
     @SerializedName("Address")
     @Expose
-    private String address;
+    private Object address;
     @SerializedName("AddressType")
     @Expose
-    private String addressType;
+    private Object addressType;
     @SerializedName("City")
     @Expose
-    private String city;
+    private Object city;
     @SerializedName("Country")
     @Expose
-    private String country;
+    private Object country;
     @SerializedName("Mobile")
     @Expose
-    private String mobile;
+    private Object mobile;
     @SerializedName("Phone")
     @Expose
-    private String phone;
+    private Object phone;
     @SerializedName("State")
     @Expose
-    private String state;
+    private Object state;
 
     /**
      * 
      * @return
      *     The address
      */
-    public String getAddress() {
+    public Object getAddress() {
         return address;
     }
 
@@ -44,7 +42,7 @@ public class Address {
      * @param address
      *     The Address
      */
-    public void setAddress(String address) {
+    public void setAddress(Object address) {
         this.address = address;
     }
 
@@ -53,7 +51,7 @@ public class Address {
      * @return
      *     The addressType
      */
-    public String getAddressType() {
+    public Object getAddressType() {
         return addressType;
     }
 
@@ -62,7 +60,7 @@ public class Address {
      * @param addressType
      *     The AddressType
      */
-    public void setAddressType(String addressType) {
+    public void setAddressType(Object addressType) {
         this.addressType = addressType;
     }
 
@@ -71,7 +69,7 @@ public class Address {
      * @return
      *     The city
      */
-    public String getCity() {
+    public Object getCity() {
         return city;
     }
 
@@ -80,7 +78,7 @@ public class Address {
      * @param city
      *     The City
      */
-    public void setCity(String city) {
+    public void setCity(Object city) {
         this.city = city;
     }
 
@@ -89,7 +87,7 @@ public class Address {
      * @return
      *     The country
      */
-    public String getCountry() {
+    public Object getCountry() {
         return country;
     }
 
@@ -98,7 +96,7 @@ public class Address {
      * @param country
      *     The Country
      */
-    public void setCountry(String country) {
+    public void setCountry(Object country) {
         this.country = country;
     }
 
@@ -107,7 +105,7 @@ public class Address {
      * @return
      *     The mobile
      */
-    public String getMobile() {
+    public Object getMobile() {
         return mobile;
     }
 
@@ -116,7 +114,7 @@ public class Address {
      * @param mobile
      *     The Mobile
      */
-    public void setMobile(String mobile) {
+    public void setMobile(Object mobile) {
         this.mobile = mobile;
     }
 
@@ -125,7 +123,7 @@ public class Address {
      * @return
      *     The phone
      */
-    public String getPhone() {
+    public Object getPhone() {
         return phone;
     }
 
@@ -134,7 +132,7 @@ public class Address {
      * @param phone
      *     The Phone
      */
-    public void setPhone(String phone) {
+    public void setPhone(Object phone) {
         this.phone = phone;
     }
 
@@ -143,7 +141,7 @@ public class Address {
      * @return
      *     The state
      */
-    public String getState() {
+    public Object getState() {
         return state;
     }
 
@@ -152,7 +150,7 @@ public class Address {
      * @param state
      *     The State
      */
-    public void setState(String state) {
+    public void setState(Object state) {
         this.state = state;
     }
 

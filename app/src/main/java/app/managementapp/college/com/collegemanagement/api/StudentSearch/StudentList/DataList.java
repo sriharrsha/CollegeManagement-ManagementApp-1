@@ -1,28 +1,26 @@
 
-package app.managementapp.college.com.collegemanagement.api.StudentPersonalDetails;
-
+package app.managementapp.college.com.collegemanagement.api.StudentSearch.StudentList;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
 
 public class DataList {
 
     @SerializedName("Addressal")
     @Expose
-    private Object addressal;
+    private String addressal;
     @SerializedName("CardNo")
     @Expose
     private Object cardNo;
     @SerializedName("Code")
     @Expose
-    private Object code;
+    private String code;
     @SerializedName("DateOfBirth")
     @Expose
     private String dateOfBirth;
     @SerializedName("FirstName")
     @Expose
-    private String firstName;
+    private Object firstName;
     @SerializedName("FullName")
     @Expose
     private String fullName;
@@ -34,22 +32,22 @@ public class DataList {
     private Integer iD;
     @SerializedName("LastName")
     @Expose
-    private String lastName;
+    private Object lastName;
     @SerializedName("MGUID")
     @Expose
     private String mGUID;
     @SerializedName("MiddleName")
     @Expose
-    private String middleName;
+    private Object middleName;
     @SerializedName("Photo")
     @Expose
     private Object photo;
     @SerializedName("AdmissionYear")
     @Expose
-    private String admissionYear;
+    private Object admissionYear;
     @SerializedName("ApplicationNo")
     @Expose
-    private String applicationNo;
+    private Object applicationNo;
     @SerializedName("BloodGroup")
     @Expose
     private Object bloodGroup;
@@ -82,49 +80,49 @@ public class DataList {
     private Object fatherOccupation;
     @SerializedName("FathersName")
     @Expose
-    private String fathersName;
+    private Object fathersName;
     @SerializedName("Mobile")
     @Expose
     private String mobile;
     @SerializedName("MothersName")
     @Expose
-    private String mothersName;
+    private Object mothersName;
     @SerializedName("PermanentAddress")
     @Expose
     private PermanentAddress permanentAddress;
     @SerializedName("RegNomenclature")
     @Expose
-    private String regNomenclature;
+    private Object regNomenclature;
     @SerializedName("RegistrationNo")
     @Expose
-    private String registrationNo;
+    private Object registrationNo;
     @SerializedName("RollNo")
     @Expose
     private Object rollNo;
     @SerializedName("SectionName")
     @Expose
-    private Object sectionName;
+    private String sectionName;
     @SerializedName("SemID")
     @Expose
-    private Integer semID;
+    private Object semID;
     @SerializedName("Semester")
     @Expose
-    private String semester;
+    private Object semester;
     @SerializedName("Status")
     @Expose
-    private String status;
+    private Object status;
     @SerializedName("SyllabusYear")
     @Expose
-    private String syllabusYear;
+    private Object syllabusYear;
     @SerializedName("TermNomenclature")
     @Expose
-    private String termNomenclature;
+    private Object termNomenclature;
     @SerializedName("UniversityAddress")
     @Expose
-    private String universityAddress;
+    private Object universityAddress;
     @SerializedName("UniversityName")
     @Expose
-    private String universityName;
+    private Object universityName;
     @SerializedName("isGrade")
     @Expose
     private Integer isGrade;
@@ -134,7 +132,7 @@ public class DataList {
      * @return
      *     The addressal
      */
-    public Object getAddressal() {
+    public String getAddressal() {
         return addressal;
     }
 
@@ -143,7 +141,7 @@ public class DataList {
      * @param addressal
      *     The Addressal
      */
-    public void setAddressal(Object addressal) {
+    public void setAddressal(String addressal) {
         this.addressal = addressal;
     }
 
@@ -170,7 +168,7 @@ public class DataList {
      * @return
      *     The code
      */
-    public Object getCode() {
+    public String getCode() {
         return code;
     }
 
@@ -179,7 +177,7 @@ public class DataList {
      * @param code
      *     The Code
      */
-    public void setCode(Object code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
@@ -206,7 +204,7 @@ public class DataList {
      * @return
      *     The firstName
      */
-    public String getFirstName() {
+    public Object getFirstName() {
         return firstName;
     }
 
@@ -215,7 +213,7 @@ public class DataList {
      * @param firstName
      *     The FirstName
      */
-    public void setFirstName(String firstName) {
+    public void setFirstName(Object firstName) {
         this.firstName = firstName;
     }
 
@@ -278,7 +276,7 @@ public class DataList {
      * @return
      *     The lastName
      */
-    public String getLastName() {
+    public Object getLastName() {
         return lastName;
     }
 
@@ -287,7 +285,7 @@ public class DataList {
      * @param lastName
      *     The LastName
      */
-    public void setLastName(String lastName) {
+    public void setLastName(Object lastName) {
         this.lastName = lastName;
     }
 
@@ -314,7 +312,7 @@ public class DataList {
      * @return
      *     The middleName
      */
-    public String getMiddleName() {
+    public Object getMiddleName() {
         return middleName;
     }
 
@@ -323,7 +321,7 @@ public class DataList {
      * @param middleName
      *     The MiddleName
      */
-    public void setMiddleName(String middleName) {
+    public void setMiddleName(Object middleName) {
         this.middleName = middleName;
     }
 
@@ -350,7 +348,7 @@ public class DataList {
      * @return
      *     The admissionYear
      */
-    public String getAdmissionYear() {
+    public Object getAdmissionYear() {
         return admissionYear;
     }
 
@@ -359,7 +357,7 @@ public class DataList {
      * @param admissionYear
      *     The AdmissionYear
      */
-    public void setAdmissionYear(String admissionYear) {
+    public void setAdmissionYear(Object admissionYear) {
         this.admissionYear = admissionYear;
     }
 
@@ -368,7 +366,7 @@ public class DataList {
      * @return
      *     The applicationNo
      */
-    public String getApplicationNo() {
+    public Object getApplicationNo() {
         return applicationNo;
     }
 
@@ -377,7 +375,7 @@ public class DataList {
      * @param applicationNo
      *     The ApplicationNo
      */
-    public void setApplicationNo(String applicationNo) {
+    public void setApplicationNo(Object applicationNo) {
         this.applicationNo = applicationNo;
     }
 
@@ -566,7 +564,7 @@ public class DataList {
      * @return
      *     The fathersName
      */
-    public String getFathersName() {
+    public Object getFathersName() {
         return fathersName;
     }
 
@@ -575,7 +573,7 @@ public class DataList {
      * @param fathersName
      *     The FathersName
      */
-    public void setFathersName(String fathersName) {
+    public void setFathersName(Object fathersName) {
         this.fathersName = fathersName;
     }
 
@@ -602,7 +600,7 @@ public class DataList {
      * @return
      *     The mothersName
      */
-    public String getMothersName() {
+    public Object getMothersName() {
         return mothersName;
     }
 
@@ -611,7 +609,7 @@ public class DataList {
      * @param mothersName
      *     The MothersName
      */
-    public void setMothersName(String mothersName) {
+    public void setMothersName(Object mothersName) {
         this.mothersName = mothersName;
     }
 
@@ -638,7 +636,7 @@ public class DataList {
      * @return
      *     The regNomenclature
      */
-    public String getRegNomenclature() {
+    public Object getRegNomenclature() {
         return regNomenclature;
     }
 
@@ -647,7 +645,7 @@ public class DataList {
      * @param regNomenclature
      *     The RegNomenclature
      */
-    public void setRegNomenclature(String regNomenclature) {
+    public void setRegNomenclature(Object regNomenclature) {
         this.regNomenclature = regNomenclature;
     }
 
@@ -656,7 +654,7 @@ public class DataList {
      * @return
      *     The registrationNo
      */
-    public String getRegistrationNo() {
+    public Object getRegistrationNo() {
         return registrationNo;
     }
 
@@ -665,7 +663,7 @@ public class DataList {
      * @param registrationNo
      *     The RegistrationNo
      */
-    public void setRegistrationNo(String registrationNo) {
+    public void setRegistrationNo(Object registrationNo) {
         this.registrationNo = registrationNo;
     }
 
@@ -692,7 +690,7 @@ public class DataList {
      * @return
      *     The sectionName
      */
-    public Object getSectionName() {
+    public String getSectionName() {
         return sectionName;
     }
 
@@ -701,7 +699,7 @@ public class DataList {
      * @param sectionName
      *     The SectionName
      */
-    public void setSectionName(Object sectionName) {
+    public void setSectionName(String sectionName) {
         this.sectionName = sectionName;
     }
 
@@ -710,7 +708,7 @@ public class DataList {
      * @return
      *     The semID
      */
-    public Integer getSemID() {
+    public Object getSemID() {
         return semID;
     }
 
@@ -719,7 +717,7 @@ public class DataList {
      * @param semID
      *     The SemID
      */
-    public void setSemID(Integer semID) {
+    public void setSemID(Object semID) {
         this.semID = semID;
     }
 
@@ -728,7 +726,7 @@ public class DataList {
      * @return
      *     The semester
      */
-    public String getSemester() {
+    public Object getSemester() {
         return semester;
     }
 
@@ -737,7 +735,7 @@ public class DataList {
      * @param semester
      *     The Semester
      */
-    public void setSemester(String semester) {
+    public void setSemester(Object semester) {
         this.semester = semester;
     }
 
@@ -746,7 +744,7 @@ public class DataList {
      * @return
      *     The status
      */
-    public String getStatus() {
+    public Object getStatus() {
         return status;
     }
 
@@ -755,7 +753,7 @@ public class DataList {
      * @param status
      *     The Status
      */
-    public void setStatus(String status) {
+    public void setStatus(Object status) {
         this.status = status;
     }
 
@@ -764,7 +762,7 @@ public class DataList {
      * @return
      *     The syllabusYear
      */
-    public String getSyllabusYear() {
+    public Object getSyllabusYear() {
         return syllabusYear;
     }
 
@@ -773,7 +771,7 @@ public class DataList {
      * @param syllabusYear
      *     The SyllabusYear
      */
-    public void setSyllabusYear(String syllabusYear) {
+    public void setSyllabusYear(Object syllabusYear) {
         this.syllabusYear = syllabusYear;
     }
 
@@ -782,7 +780,7 @@ public class DataList {
      * @return
      *     The termNomenclature
      */
-    public String getTermNomenclature() {
+    public Object getTermNomenclature() {
         return termNomenclature;
     }
 
@@ -791,7 +789,7 @@ public class DataList {
      * @param termNomenclature
      *     The TermNomenclature
      */
-    public void setTermNomenclature(String termNomenclature) {
+    public void setTermNomenclature(Object termNomenclature) {
         this.termNomenclature = termNomenclature;
     }
 
@@ -800,7 +798,7 @@ public class DataList {
      * @return
      *     The universityAddress
      */
-    public String getUniversityAddress() {
+    public Object getUniversityAddress() {
         return universityAddress;
     }
 
@@ -809,7 +807,7 @@ public class DataList {
      * @param universityAddress
      *     The UniversityAddress
      */
-    public void setUniversityAddress(String universityAddress) {
+    public void setUniversityAddress(Object universityAddress) {
         this.universityAddress = universityAddress;
     }
 
@@ -818,7 +816,7 @@ public class DataList {
      * @return
      *     The universityName
      */
-    public String getUniversityName() {
+    public Object getUniversityName() {
         return universityName;
     }
 
@@ -827,7 +825,7 @@ public class DataList {
      * @param universityName
      *     The UniversityName
      */
-    public void setUniversityName(String universityName) {
+    public void setUniversityName(Object universityName) {
         this.universityName = universityName;
     }
 

@@ -1,25 +1,11 @@
 
 package app.managementapp.college.com.collegemanagement.api;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
 import java.util.HashMap;
 import java.util.Map;
 
-public class AlternateStaffStatusDetail implements Parcelable {
+public class AlternateStaffStatusDetail {
 
-    public static final Creator<AlternateStaffStatusDetail> CREATOR = new Creator<AlternateStaffStatusDetail>() {
-        @Override
-        public AlternateStaffStatusDetail createFromParcel(Parcel in) {
-            return new AlternateStaffStatusDetail(in);
-        }
-
-        @Override
-        public AlternateStaffStatusDetail[] newArray(int size) {
-            return new AlternateStaffStatusDetail[size];
-        }
-    };
     private Object alternateStaffName;
     private String comment;
     private String gUID;
@@ -27,11 +13,6 @@ public class AlternateStaffStatusDetail implements Parcelable {
     private Integer scheduleID;
     private Integer status;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
-
-    protected AlternateStaffStatusDetail(Parcel in) {
-        comment = in.readString();
-        gUID = in.readString();
-    }
 
     /**
      * 
@@ -149,14 +130,4 @@ public class AlternateStaffStatusDetail implements Parcelable {
         this.additionalProperties.put(name, value);
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(comment);
-        dest.writeString(gUID);
-    }
 }
